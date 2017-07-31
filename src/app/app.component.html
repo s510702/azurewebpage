@@ -23,11 +23,48 @@
 <li><b>Email:</b> <span class="glyphicon glyphicon-envelope"></span></li>
 </ul>
 -->
+<p></p>
 <p>I come from <a href="http://en.wikipedia.org/wiki/Xi%27an">Xi'an, Shaanxi</a>, China.</p>
 <p>Now I am working for Microsoft in Redmond, WA.</p> 
-<p>I graduated from UC Riverside in August, 2013. </p>
-<p>Email me: <span class="glyphicon glyphicon-envelope"></span></p>
+<p>I graduated from UC Riverside in 2013. </p>
+<p>
+Email me: <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-envelope"></span></button>
+</p>
 </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send Me a Mail</h4>
+      </div>
+      
+      <div class="modal-body">
+        <form class="form-horizontal" id='myForm' role="form">
+          <div class="col-md-7">
+            Name: <input type="text" [(ngModel)]='demoInfo.name' class="form-control" ngControl='name'>
+          </div>
+          
+          <div class="col-md-7">
+            Password:   <input type="password" [(ngModel)]='demoInfo.password' class="form-control" ngControl='password'>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+    <!--
+        <button type="button" [disabled]='!CreateGroup.valid' (click)="SendMail(demoInfo)" class="btn btn-primary">Create</button>
+    -->
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 </div>
 
@@ -42,17 +79,40 @@
 </nav>
 </div>
 
-<!---
-<div class="container">
-<p class="introduction">Now I am working for Microsoft in Redmond, WA.</p> 
-<p class="introduction">I graduated from UC Riverside in August, 2013. </p>
-<p class="introduction">I come from <a href="http://en.wikipedia.org/wiki/Xi%27an">Xi'an, Shaanxi</a>, China.</p>
+<!--
+<div class='container-fluid'>
+  <div id='content' class='row-fluid'>
+    <div class='col-sm-2 sidebar'>
+        <ul class="nav nav-tabs nav-stacked">
+          <li><a href="#work">Work Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#personal">Personal</a></li>
+        </ul>
+    </div>
+
+    <div class='col-sm-10 main'>
+        <h2 class="index">Work Experience</h2>
+        <p>I am contributing to Failover Clustering in Windows Server. <a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-clustering-overview">Learn the latest features in Windows Server 2016</a>.</p>
+
+        <p>Some features I contributed: </p>
+
+<h4>Health Service</h4>
+<ul>
+  <li></li>
+</ul>
+
+<h4>Hyper-converged Solution using Storage Spaces Direct</h4>
+<ul>
+  <li></li>
+</ul>
+    </div>
+  </div>
 </div>
-<p class="introduction">I come from <a href="http://en.wikipedia.org/wiki/Xi%27an">Xi'an, Shaanxi</a>, China. From 2008 to 2013, I worked in <a href="http://www.cs.ucr.edu/~ciardo/LaSVlab/index.html"> Logic and Stochastic Verification Lab</a></b> with <a href="http://www.cs.ucr.edu/~ciardo">Dr. Gianfranco Ciardo</a>.
-</p>
 -->
 
-<div class="container">
+<div class="container-fluid">
+<div>
 <a name="work">
   <h2 class="index">Work Experience</h2>
 </a>
@@ -64,6 +124,7 @@
 <ul>
   <li></li>
 </ul>
+</div>
 
 <h4>Hyper-converged Solution using Storage Spaces Direct</h4>
 <ul>
