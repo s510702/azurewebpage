@@ -45,12 +45,16 @@ Email me: <button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
       
       <div class="modal-body">
         <form class="form-horizontal" id='myForm' role="form">
-          <div class="col-md-7">
+          <div class="col-md-10">
             Name: <input type="text" [(ngModel)]='demoInfo.name' class="form-control" ngControl='name'>
           </div>
           
-          <div class="col-md-7">
-            Password:   <input type="password" [(ngModel)]='demoInfo.password' class="form-control" ngControl='password'>
+          <div class="col-md-10">
+            Email: <input type="text" [(ngModel)]='demoInfo.email' class="form-control" ngControl='email'>
+          </div>
+
+          <div class="col-md-10">
+            Body: <input type="textset" [(ngModel)]='demoInfo.body' class="form-control" ngControl='body'>
           </div>
         </form>
       </div>

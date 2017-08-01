@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
 
 class DemoInfo{
   name:string;
-  password: string; 
+  email: string; 
+  body: string;
 }
 
 @Component({
