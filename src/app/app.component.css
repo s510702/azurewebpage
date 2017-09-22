@@ -80,3 +80,7 @@ ul.contact {list-style-position:inside}
 ul.contents {list-style-position:inside}
 p.red {color:red}
 .gray{color:gray}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}

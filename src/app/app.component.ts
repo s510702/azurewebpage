@@ -22,6 +22,10 @@ export class AppComponent {
   //CreateGroup: FormBuilder;
   demoInfo: DemoInfo;
 
+  Submit(mailForm) {
+    console.log("Here!");
+    console.log(mailForm);
+  }
   /*
   Constructor(fb: FormBuilder){
     this.demoInfo= new DemoInfo(); 

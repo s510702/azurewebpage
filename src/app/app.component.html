@@ -35,36 +35,43 @@ Email me: <button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Send Me a Mail</h4>
       </div>
-      
       <div class="modal-body">
-        <form class="form-horizontal" id='myForm' role="form">
-          <div class="col-md-10">
-            Name: <input type="text" [(ngModel)]='demoInfo.name' class="form-control" ngControl='name'>
-          </div>
-          
-          <div class="col-md-10">
-            Email: <input type="text" [(ngModel)]='demoInfo.email' class="form-control" ngControl='email'>
+        <form #mailForm="ngForm" (ngSubmit)="Submit(mailForm)" class="form-horizontal" id="mailForm" role="form">
+          <div>
+            <label for="name">Name:</label>
+            <input required ngModel name="name" #name="ngModel" id="name" type="text" class="form-control">
+            <div class="alert alert-danger" *ngIf="name.touched && !name.valid">Your name is required!</div>
           </div>
 
-          <div class="col-md-10">
-            Body: <input type="textset" [(ngModel)]='demoInfo.body' class="form-control" ngControl='body'>
+          <div>
+            <label for="email">Email:</label>
+            <input required ngModel name="email" #email="ngModel" id="email" type="text" class="form-control">
+            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Your email is required!</div>
           </div>
+          
+          <div>
+            <label for="body">Body:</label>
+            <textarea ngModel name="body" #body="ngModel" cols="30" rows="10" id="body" class="form-control"></textarea>
+          </div>
+
+          <button class="btn btn-primary" [disabled]='!mailForm.valid'>Send</button>
         </form>
       </div>
 
       <div class="modal-footer">
-    <!--
+          <label>Thank you for contacting me!</label>
+        <!--
         <button type="button" [disabled]='!CreateGroup.valid' (click)="SendMail(demoInfo)" class="btn btn-primary">Create</button>
-    -->
         <button type="button" class="btn btn-primary">Send</button>
+        -->
       </div>
+
     </div>
   </div>
 </div>
