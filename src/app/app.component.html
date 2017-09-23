@@ -51,8 +51,18 @@ Email me: <button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
 
           <div>
             <label for="email">Email:</label>
-            <input required ngModel name="email" #email="ngModel" id="email" type="text" class="form-control">
-            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Your email is required!</div>
+            <input 
+              required 
+              ngModel name="email" 
+              #email="ngModel" 
+              id="email" 
+              type="text" 
+              class="form-control">
+            <div 
+              class="alert alert-danger" 
+              *ngIf="email.touched && !email.valid">
+              Your email is required!
+            </div>
           </div>
           
           <div>
@@ -66,10 +76,6 @@ Email me: <button type="button" class="btn btn-info btn-lg" data-toggle="modal" 
 
       <div class="modal-footer">
           <label>Thank you for contacting me!</label>
-        <!--
-        <button type="button" [disabled]='!CreateGroup.valid' (click)="SendMail(demoInfo)" class="btn btn-primary">Create</button>
-        <button type="button" class="btn btn-primary">Send</button>
-        -->
       </div>
 
     </div>

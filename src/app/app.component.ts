@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http } from '@angular/http';
 
 //simport {CORE_DIRECTIVES, NgClass, Control, ControlGroup, FormBuilder, Validators} from '@angular/common';
 //import {FORM_DIRECTIVES} from '@angular/forms';
@@ -20,12 +21,15 @@ export class AppComponent {
   title = 'Yang\'s Homepage';
 
   //CreateGroup: FormBuilder;
-  demoInfo: DemoInfo;
+  //demoInfo: DemoInfo;
+
+  constructor(http : Http) {
+  }
 
   Submit(mailForm) {
-    console.log("Here!");
     console.log(mailForm);
   }
+
   /*
   Constructor(fb: FormBuilder){
     this.demoInfo= new DemoInfo(); 
