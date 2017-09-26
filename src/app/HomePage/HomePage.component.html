@@ -1,0 +1,66 @@
+<div class="left"><a target="_blank" href="http://www.microsoft.com"><IMG SRC="app/ms-logo-site-share.png" ALT="MS Logo" WIDTH=250
+	HEIGHT=250 X-SAS-UseImageWidth X-SAS-UseImageHeight ALIGN=bottom /></a>
+</div>
+  
+<div class="content">
+    <h1 class="header">&#36213;&#38451; Yang Zhao </h1>
+    <p></p>
+    <p>I come from <a href="http://en.wikipedia.org/wiki/Xi%27an">Xi'an, Shaanxi</a>, China.</p>
+    <p>Now I am working for Microsoft in Redmond, WA.</p> 
+    <p>I graduated from UC Riverside in 2013. </p>
+    <p>
+    Email me: <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-envelope"></span></button>
+    </p>
+</div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Send Me a Mail</h4>
+            </div>
+            <div class="modal-body">
+              <form #mailForm="ngForm" (ngSubmit)="Submit(mailForm)" class="form-horizontal" id="mailForm" role="form">
+                <div>
+                  <label for="name">Name:</label>
+                  <input 
+                    required 
+                    ngModel name="name" #name="ngModel" id="name" type="text" class="form-control">
+                  <div class="alert alert-danger" *ngIf="name.touched && !name.valid">Your name is required!</div>
+                </div>
+      
+                <div>
+                  <label for="email">Email:</label>
+                  <input 
+                    required 
+                    ngModel name="email" 
+                    #email="ngModel" 
+                    id="email" 
+                    type="text" 
+                    class="form-control">
+                  <div 
+                    class="alert alert-danger" 
+                    *ngIf="email.touched && !email.valid">
+                    Your email is required!
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="body">Body:</label>
+                  <textarea ngModel name="body" #body="ngModel" cols="30" rows="10" id="body" class="form-control"></textarea>
+                </div>
+      
+                <button class="btn btn-primary" [disabled]='!mailForm.valid'>Send</button>
+              </form>
+            </div>
+      
+            <div class="modal-footer">
+                <label>Thank you for contacting me!</label>
+            </div>
+      
+          </div>
+        </div>
+      </div>

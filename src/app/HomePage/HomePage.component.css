@@ -1,27 +1,3 @@
-
-/* body {
-font-family:Arial,Verdana,Sans-serif;
-width:70%;
-margin-left:auto;
-margin-right:auto;
-margin-top:10px;
-margin-bottom:10px;
-clear:both;
-line-height:150%;
-}
-*/
-
-div.jumbotron
-{
-background-color:white;
-}
-
-
-div.container
-{
-line-height:150%;
-}
-
 div.header,div.footer
 {
 padding:0.5em;

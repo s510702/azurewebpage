@@ -1,0 +1,9 @@
+  .jumbotron {
+    height: 200px;
+    color: #00070A;
+    text-shadow: #444 0 1px 1px;
+    background:transparent;
+    background-image: url("../../assets/whiteboard.jpg");
+    background-size: cover;
+  }
+  
