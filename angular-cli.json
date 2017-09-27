@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "app/ms-logo-site-share.png"
+        "app/ms-logo-site-share.png",
+        "assets/whiteboard.jpg"
       ],
       "index": "index.html",
       "main": "main.ts",
